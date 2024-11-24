@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #121113;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.star {
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  animation: moveit 2.5s infinite;
+}
+
+@keyframes moveit {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.fireworks {
+  position: fixed;
+}
+
+section.content {
+  z-index: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+section.content h2 {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+  font-size: 8vw;
+  line-height: 0.9em;
+}
+
+section.content h2 c {
+  color: #da1717;
+  -webkit-text-stroke: 0 #fff;
+}
+
+section.content h2 span {
+  position: relative;
+  background: #27d452;
+  font-size: 2vw;
+  display: inline-block;
+  color: black;
+  padding: 0 10px;
+  top: -30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.5em;
+  -webkit-text-stroke: 0px #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+section.content img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+
+@media (max-width: 768px) {
+  section.content h2 {
+    font-size: 6vw;
+  }
+
+  section.content h2 span {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  section.content h2 {
+    font-size: 5vw;
+  }
+
+  section.content h2 span {
+    font-size: 3vw;
+  }
+}
